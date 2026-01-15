@@ -1,7 +1,7 @@
 package com.umerqureshicodes.backend.controller;
 
 
-import com.example.service.AuthService;
+import com.umerqureshicodes.backend.service.AuthService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*", allowCredentials = "true")
 public class AuthController {
     private final AuthService authService;
 
