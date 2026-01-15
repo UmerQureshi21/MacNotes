@@ -5,7 +5,7 @@ import com.umerqureshicodes.backend.entity.User;
 import com.umerqureshicodes.backend.repository.AdminRepository;
 import com.umerqureshicodes.backend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,7 @@ import java.util.Optional;
 public class AuthService {
     private final UserRepository userRepository;
     private final AdminRepository adminRepository;
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
     /**
      * User signin logic
@@ -39,7 +39,7 @@ public class AuthService {
         }
 
         User user = userOpt.get();
-        if (!passwordEncoder.matches(password, user.getPassword())) {
+        if (!password.equals(user.getPassword())) {
             response.put("status", "fail");
             response.put("message", "Wrong password!");
             return response;
@@ -68,7 +68,7 @@ public class AuthService {
         }
 
         Admin admin = adminOpt.get();
-        if (!passwordEncoder.matches(password, admin.getPassword())) {
+        if (!password.equals(admin.getPassword())) {
             response.put("status", "fail");
             response.put("message", "Wrong password!");
             return response;
@@ -109,7 +109,7 @@ public class AuthService {
         User user = new User();
         user.setMacID(macID);
         user.setUsername(username);
-        user.setPassword(passwordEncoder.encode(password));
+        user.setPassword(password);
         user.setNumberUploads(0);
         user.setNumDownloads(0);
         userRepository.save(user);
