@@ -20,9 +20,9 @@ MacNotes lets users:
 3) Reporting System: a simple way to flag inappropriate or irrelevant uploads. <br/>
 4) Course-Based Browsing: notes are organized by course codes to keep everything clean and easy to find. <br/>
 
-![MacNotes search](images/search.png)
+![MacNotes search](frontend/images/search.png)
 
-![MacNotes mtnotes](images/my-notes.png)
+![MacNotes mtnotes](frontend/images/my-notes.png)
 
 
 
