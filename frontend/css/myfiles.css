@@ -1,0 +1,397 @@
+/*
+ - This is the css file of the myfiles page
+ - Authors: Marko Kosoric & Alhan Walli & Aryan Minhas 
+*/
+
+.dashboard-container {
+  display: flex;
+  background-color: var(--stronger-background-color);
+}
+
+.dashboard-container,
+.sidebar {
+  height: 100%;
+}
+.files-container {
+  height: 98%;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  background-color: var(--sidebar-color);
+  padding: 2rem 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+}
+.logo h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.sidebar ul li {
+  margin: 1rem 1rem;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.sidebar ul li a i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 30px;
+}
+
+.myfiles-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 1rem;
+  background-color: var(--stronger-background-color);
+  margin: 10px;
+}
+
+.file-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.file-controls input[type="text"] {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 2rem;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 1rem;
+}
+
+.file-controls select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 2rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: var(--lighter-background-color);
+}
+
+.downloaded-controls input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 2rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.files-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.files-section {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--lighter-background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.files-section h2 {
+  height: 5%;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.file-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lighter-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.file-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.file-info .rating,
+.file-info .downloads {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.file-info i {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.view-btn,
+.download-again-btn {
+  text-align: center;
+  background-color: var(--text-color);
+  color: var(--stronger-background-color);
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-btn:hover,
+.download-again-btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.no-results {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--sidebar-color);
+  margin-top: 1rem;
+}
+
+.no-results.visible {
+  display: block;
+}
+
+.metadata-form button[type="submit"][disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+#downloaded_coursecode_filter,
+#uploaded_coursecode_filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 10%;
+}
+
+#search-and-sort-area {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.uploadedcoursecodecheckboxes,
+.downloadedcoursecodecheckboxes {
+  display: none;
+}
+
+.uploadedcoursecodecheckboxes:checked + span,
+.downloadedcoursecodecheckboxes:checked + span {
+  background-color: #007bff;
+  color: white;
+}
+
+.checkbox-wrapper label {
+  color: black;
+  cursor: pointer;
+  padding: 2px 5px;
+  background-color: var(--stronger-background-color);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-wrapper label:hover {
+  background-color: #e0e0e0;
+}
+
+/* This targets the label when its child checkbox is checked */
+.checkbox-wrapper input[type="checkbox"]:checked + label {
+  background-color: var(--stronger-background-color);
+  color: var(--text-color);
+}
+
+.footer-links {
+  padding-top: 5px;
+  height: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  color: var(--text-color);
+}
+
+#uploadedSearchInput,
+#uploadedSortSelect,
+#downloadedSortSelect {
+  background: var(--stronger-background-color);
+  color: var(--text-color);
+}
+#uploadedSearchInput,
+#downloadedSearchInput {
+  width: 70%;
+  background-color: var(--stronger-background-color);
+}
+#sortSelect {
+  width: 30%;
+}
+#uploaded-files-list,
+#downloaded-files-list {
+  overflow-y: scroll;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--stronger-background-color);
+  min-height: 450px;
+  height: 80%;
+  width: 100%;
+}
+
+.mode {
+  /*container of dark mode light mode swtich and text*/
+  background: var(--sidebar-color);
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: var(--text-color);
+}
+
+.mode .moon-sun {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 50px;
+  margin-left: 8%;
+}
+.mode i {
+  position: absolute;
+}
+
+.sun {
+  opacity: 0;
+}
+
+.toggle-switch {
+  right: 20px;
+  position: absolute;
+  display: flex;
+  height: 100%;
+  min-width: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--text-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  background: var(--sidebar-color);
+  transition: 0.3s ease;
+}
+
+.mode.dark .switch::before {
+  left: 25px;
+}
+
+.mode-text {
+  width: 60%;
+  margin-right: 40%;
+}
+
+.mode:hover {
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.mode:hover .switch {
+  background-color: var(--lighter-background-color);
+}

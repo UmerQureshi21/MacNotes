@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+- This is the html file of the home page
+- Author: Alhan Walli & Aryan Minhas
+-->
+<html lang="en">
+
+<head>
+  <!-- Set Dark Mode Theme Early If Enabled -->
+  <script>
+    if (sessionStorage.getItem("isDark") === "Yes") {
+      document.documentElement.style.setProperty('--text-color', '#b1b1b1');
+      document.documentElement.style.setProperty('--sidebar-color', '#2b2b2b');
+      document.documentElement.style.setProperty('--lighter-background-color', '#434343');
+      document.documentElement.style.setProperty('--stronger-background-color', 'rgb(26, 26, 26)');
+      document.documentElement.classList.add('dark');
+    }
+  </script>    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MacNotes | Homepage</title>
+  <!--Icon Pack Link-->
+  <!-- Note that all elements <i> are icon elements-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <!--Stylesheet + Scipts-->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/homeStyle.css" />
+</head>
+
+<body>
+  <!--Header-->
+  <header class="header">
+    <div class="logo">
+      <img src="images/maclogo.png" alt="">
+      <h1>MacNotes</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="login.html" class="btn-login">Login / Sign Up</a>
+    </nav>
+  </header>
+  <!--Hero Section-->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <section class="macnotes-title">
+          <h1 class="main-text">MACNOTES</h1>
+        </section>
+        <div class="button-overlay">
+          <a href="login.html" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+  </section>
+  <!--Features Section-->
+  <section class="features-section">
+    <h2>Why Use MacNotes?</h2>
+    <div class="features-container">
+      <div class="feature-box">
+        <i class="ri-file-list-3-line"></i>
+        <h3>Organized Resources</h3>
+        <p>Access a wide range of student-shared notes, assignments, and study guides.</p>
+      </div>
+      <div class="feature-box">
+        <i class="ri-star-line"></i>
+        <h3>Rating System</h3>
+        <p>Easily find the highest-rated notes to speed up your learning process.</p>
+      </div>
+      <div class="feature-box">
+        <i class="ri-user-smile-line"></i>
+        <h3>Community Driven</h3>
+        <p>Share your own notes and help classmates succeed while building your reputation.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <!--Testimonials & Stats Section-->
+  <section class="testimonials-stats">
+    <h2>What Our Classmates Say</h2>
+    <div class="testimonials-container">
+      <div class="testimonial-box">
+        <p>
+          “MacNotes saved me hours of studying! The rating system helped me
+          find the best resources in seconds.”
+        </p>
+        <span>- Sepanta</span>
+      </div>
+      <div class="testimonial-box">
+        <p>
+          “Sharing my notes has been rewarding. I love seeing how many people
+          found them helpful!”
+        </p>
+        <span>- Umer</span>
+      </div>
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-box">
+        <h3>10k+</h3>
+        <p>Downloads</p>
+      </div>
+      <div class="stat-box">
+        <h3>5k+</h3>
+        <p>Uploaded Notes</p>
+      </div>
+      <div class="stat-box">
+        <h3>500+</h3>
+        <p>Active Courses</p>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p>&copy; 2025 MacNotes. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

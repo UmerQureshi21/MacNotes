@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--
+- This is the html file of the myfiles page
+- Author: Alhan Walli & Aryan Minhas
+-->
+<html lang="en">
+  <head>
+    <!-- Set Dark Mode Theme Early If Enabled -->
+    <script>
+      if (sessionStorage.getItem("isDark") === "Yes") {
+        document.documentElement.style.setProperty("--text-color", "#b1b1b1");
+        document.documentElement.style.setProperty(
+          "--sidebar-color",
+          "#2b2b2b"
+        );
+        document.documentElement.style.setProperty(
+          "--lighter-background-color",
+          "#434343"
+        );
+        document.documentElement.style.setProperty(
+          "--stronger-background-color",
+          "rgb(26, 26, 26)"
+        );
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacNotes | My Files</title>
+    <!--Icon Pack Link-->
+    <!-- Note that all elements <i> are icon elements-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--Stylesheet + Scipts-->
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/myfiles.css" />
+    <script src="js/myfiles.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/toggle.js"></script>
+    <script
+      src="https://kit.fontawesome.com/24ff6cf73e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Header-->
+
+    <!--Containter-->
+    <div class="dashboard-container">
+      <!--Sidebar-->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images/maclogo.png" alt="" />
+          <h1>MacNotes</h1>
+        </div>
+        <ul class="sidebar-menu">
+          <li class = "dashboard-button">
+            <a href="dashboard.html">
+              <i class="ri-dashboard-line"></i>
+              <span id="sidebar-options">Dashboard</span>
+            </a>
+          </li>
+          <li class = "upload-button">
+            <a href="upload.html">
+              <i class="ri-upload-cloud-2-line"></i> Upload
+            </a>
+          </li>
+          <li class = "myfiles-button">
+            <a href="myfiles.html" class="active"> <i class="ri-folder-line"></i> My Files </a>
+          </li>
+          <li class = "searchpage-button">
+            <a href="searchpage.html">
+              <i class="ri-search-line"></i> Search
+            </a>
+          </li>
+          <li class = "logout-button">
+            <a href="index.html">
+              <i class="ri-logout-box-r-line"></i> Logout
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="fa-solid fa-moon icon moon"></i>
+              <i class="fa-solid fa-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark Mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"> </span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+      <!--Main Content-->
+      <main class="myfiles-page">
+        <div class="files-container">
+          <!-- Uploaded Files Section -->
+          <div class="files-section uploaded-files" id="uploadedFiles">
+            <h2>My Uploaded Files</h2>
+            <div class="file-controls">
+              <div id="search-and-sort-area">
+                <input
+                  type="text"
+                  id="uploadedSearchInput"
+                  placeholder="Search uploaded files..."
+                />
+                <select id="uploadedSortSelect">
+                  <option value="Newest">Date</option>
+                  <option value="Highest Rated">Rating</option>
+                  <option value="Most Downloaded">Downloads</option>
+                  <option value="Name">Alphabetically</option>
+                </select>
+              </div>
+
+              <div id="uploaded_coursecode_filter">
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1MD3"
+                    checked
+                    value="1MD3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1MD3">1MD3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1JC3"
+                    checked
+                    value="1JC3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1JC3">1JC3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1ZA3"
+                    checked
+                    value="1ZA3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1ZA3">1ZA3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1B03"
+                    checked
+                    value="1B03"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1B03">1B03</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1DM3"
+                    checked
+                    value="1DM3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1DM3">1DM3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1XC3"
+                    checked
+                    value="1XC3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1XC3">1XC3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1XD3"
+                    checked
+                    value="1XD3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1XD3">1XD3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="u1ZB3"
+                    checked
+                    value="1ZB3"
+                    class="uploadedcoursecodecheckboxes"
+                  />
+                  <label for="u1ZB3">1ZB3</label>
+                </div>
+              </div>
+            </div>
+            <!-- Uploaded Files List-->
+            <div id="uploaded-files-list"></div>
+          </div>
+
+          <!-- Downloaded Files Section -->
+          <div class="files-section downloaded-files" id="downloadedFiles">
+            <h2>My Downloaded Files</h2>
+            <div class="file-controls">
+              <div id="search-and-sort-area">
+                <input
+                  type="text"
+                  id="downloadedSearchInput"
+                  placeholder="Search Downloaded Files..."
+                />
+                <select id="downloadedSortSelect">
+                  <option value="Newest">Date</option>
+                  <option value="Highest Rated">Rating</option>
+                  <option value="Most Downloaded">Downloads</option>
+                  <option value="Name">Alphabetically</option>
+                </select>
+              </div>
+
+              <div id="downloaded_coursecode_filter">
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="d1MD3"
+                    checked
+                    value="1MD3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="d1MD3">1MD3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1JC3"
+                    checked
+                    value="1JC3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1JC3">1JC3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1ZA3"
+                    checked
+                    value="1ZA3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1ZA3">1ZA3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1B03"
+                    checked
+                    value="1B03"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1B03">1B03</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1DM3"
+                    checked
+                    value="1DM3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1DM3">1DM3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1XC3"
+                    checked
+                    value="1XC3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1XC3">1XC3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1XD3"
+                    checked
+                    value="1XD3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1XD3">1XD3</label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input
+                    type="checkbox"
+                    id="1ZB3"
+                    checked
+                    value="1ZB3"
+                    class="downloadedcoursecodecheckboxes"
+                  />
+                  <label for="1ZB3">1ZB3</label>
+                </div>
+              </div>
+            </div>
+            <!-- Downloaded Files List (Add more as you pls) -->
+            <div id="downloaded-files-list"></div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#" style="color: var(--white)">About Us</a>
+          <a href="#" style="color: var(--white)">Contact</a>
+          <a href="#" style="color: var(--white)">Privacy Policy</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

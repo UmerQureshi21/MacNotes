@@ -1,0 +1,282 @@
+/*
+ - This is the css file of the file preview page
+ - Authors: Alhan Walli & Aryan Minhas
+*/
+
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  overflow: hidden;
+}
+
+/*FileDetails Page Styles*/
+.filedetails-container {
+  display: flex;
+  height: 100%;
+  /* Adjust if header is different height */
+}
+
+iframe{
+  height: 100%;
+}
+
+/* File Preview */
+.file-preview {
+  flex: 3;
+  background-color: var(--lighter-background-color);
+  border-right: 1px solid #ddd;
+}
+
+/* Right sidebar */
+.file-info-sidebar {
+  flex: 1.2;
+  background-color: var(--stronger-background-color);
+  overflow-y: scroll;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Ratings Section */
+.ratings-section {
+  background-color: var(--lighter-background-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ratings-section h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+.ratings-section h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.star-rating i {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.star-rating i:hover {
+  color: var(--sidebar-color);
+  transform: scale(1.15);
+}
+
+.average-rating {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Accordion */
+.accordion-btn {
+  background-color: var(--sidebar-color);
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-btn:hover {
+  background-color: var(--text-color);
+  color: var( --lighter-background-color);
+}
+
+.accordion-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+/* rating stats */
+.rating-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rating-bar span {
+  width: 4rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.bar {
+  flex: 1;
+  background-color: #eee;
+  height: 8px;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  background-color: var(--text-color);
+  height: 100%;
+}
+
+.report-btn {
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.report-btn:hover {
+  background-color: var(--text-color);
+  color: var( --lighter-background-color);
+  transform: translateY(-2px);
+}
+
+/* File Details Section */
+.file-details {
+  background-color: var( --lighter-background-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.file-details h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.file-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.file-details li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  padding: 0.25rem;
+}
+
+.file-details li:hover {
+  background-color: var(--sidebar-color);
+  cursor: pointer;
+}
+
+.download-section {
+  background-color: var( --lighter-background-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.download-section .download-btn {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+  transition: all 0.3s ease;
+}
+
+.download-section .download-count {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.download-section .download-btn:hover{
+  transform: scale(1.01);
+}
+
+#report-btn{
+  background-color: var( --lighter-background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+#report-btn:hover{
+  background-color:var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+#delete-btn{
+  background-color: var( --lighter-background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 15px;
+  width: 100%;
+}
+
+#delete-btn:hover{
+  background-color:var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.sidebartitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--text-color);
+}
+
+img{
+  width: 30px;
+}
+
+.btn-login{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+  text-decoration: none;
+  color: var(--lighter-background-color);
+  border-radius: 20px;
+  margin-right: 10%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.footer-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

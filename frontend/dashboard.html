@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--
+- This is the html file of the dashboard page
+- Author: Alhan Walli & Aryan Minhas
+-->
+<html lang="en">
+
+<head>
+  <!-- Set Dark Mode Theme Early If Enabled -->
+  <script>
+    if (sessionStorage.getItem("isDark") === "Yes") {
+      document.documentElement.style.setProperty('--text-color', '#b1b1b1');
+      document.documentElement.style.setProperty('--sidebar-color', '#2b2b2b');
+      document.documentElement.style.setProperty('--lighter-background-color', '#434343');
+      document.documentElement.style.setProperty('--stronger-background-color', 'rgb(26, 26, 26)');
+      document.documentElement.classList.add('dark');
+    }
+  </script>    
+  <meta charset="UTF-8" />
+  <title>MacNotes | Dashboard</title>
+  <!--Icon Pack Link-->
+  <!-- Note that all elements <i> are icon elements-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <!--Stylesheet + Scipts-->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="js/dashboard.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/toggle.js"></script>
+  <script
+  src="https://kit.fontawesome.com/24ff6cf73e.js"
+  crossorigin="anonymous"
+></script>
+</head>
+
+<body>
+
+  <!--Containter-->
+  <div class="dashboard-container">
+    <!--Sidebar-->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/maclogo.png" alt="">
+        <h1>MacNotes</h1>
+      </div>
+      <ul class="sidebar-menu">
+        <li class = "dashboard-button">
+          <a href="dashboard.html" class="active">
+            <i class="ri-dashboard-line"></i>
+            <span id="sidebar-options">Dashboard</span>
+          </a>
+        </li>
+        <li class = "upload-button">
+          <a href="upload.html">
+            <i class="ri-upload-cloud-2-line"></i> Upload
+          </a>
+        </li>
+        <li class = "myfiles-button">
+          <a href="myfiles.html"> <i class="ri-folder-line"></i> My Files </a>
+        </li>
+        <li class = "searchpage-button">
+          <a href="searchpage.html">
+            <i class="ri-search-line"></i> Search
+          </a>
+        </li>
+        <li class = "logout-button">
+          <a href="index.html">
+            <i class="ri-logout-box-r-line"></i> Logout
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="moon-sun">
+              <i class="fa-solid fa-moon icon moon"></i>
+              <i class="fa-solid fa-sun icon sun"></i>
+          </div>
+          <span class="mode-text text">Dark Mode</span>
+
+          <div class="toggle-switch">
+               <span class="switch">
+
+               </span>
+          </div>
+        </li>
+
+      </ul>
+    </aside>
+    <!--Main Content-->
+    <main class="main-content">
+      <section class="welcome-section">
+        <h2 id="user-welcome-header">Welcome, [Username]!</h2>
+        <p>Here’s a quick overview of your recent activity and available resources.</p>
+      </section>
+
+      <section class="dashboard-overview">
+        <h3>Dashboard Overview</h3>
+        <div class="overview-cards">
+          <div class="overview-card">
+            <i class="ri-upload-cloud-2-line overview-icon"></i>
+            <h4>Total Uploads</h4>
+            <p id="user-total-uploads">0</p>
+          </div>
+          <div class="overview-card">
+            <i class="ri-download-cloud-2-line overview-icon"></i>
+            <h4>Total Downloads</h4>
+            <p id="user-total-downloads">0</p>
+          </div>
+          <div class="overview-card">
+            <i class="ri-star-line overview-icon"></i>
+            <h4>Rating</h4>
+            <p id="user-total-ratings">0</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="featured-trending">
+        <h3>Featured & Trending Resources</h3>
+        <div class="carousel multi-item-carousel">
+          <div class="slides">
+            <div class="slide">
+              <div class="card">
+                 <h2 class = "filetitle" id="filetitle1"></h2>
+                 <p class = "coursecode" id="coursecode1"></p>
+                 <button class="view-btn" id="view-btn1">View</button>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle2"></h2>
+                <p class = "coursecode" id="coursecode2"></p>
+                <button class="view-btn" id="view-btn2">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle3"></h2>
+                <p class = "coursecode" id="coursecode3"></p>
+                <button class="view-btn" id="view-btn3">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle4"></h2>
+                <p class = "coursecode" id="coursecode4"></p>
+                <button class="view-btn" id="view-btn4">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle5"></h2>
+                <p class = "coursecode" id="coursecode5"></p>
+                <button class="view-btn" id="view-btn5">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle6"></h2>
+                <p class = "coursecode" id="coursecode6"></p>
+                <button class="view-btn" id="view-btn6">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle7"></h2>
+                <p class = "coursecode" id="coursecode7"></p>
+                <button class="view-btn" id="view-btn7">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle8"></h2>
+                <p class = "coursecode" id="coursecode8"></p>
+                <button class="view-btn" id="view-btn8">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle9"></h2>
+                <p class = "coursecode" id="coursecode9"></p>
+                <button class="view-btn" id="view-btn9">View</button>
+             </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <h2 class = "filetitle" id="filetitle10"></h2>
+                <p class = "coursecode" id="coursecode10"></p>
+                <button class="view-btn" id="view-btn10">View</button>
+             </div>
+            </div>
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+      </section>
+
+      <div class=" footer-links">
+        <a href="#" style="color: var(--primary-color)">About Us</a>
+        <a href="#" style="color: var(--primary-color)">Contact</a>
+        <a href="#" style="color: var(--primary-color)">Privacy Policy</a>
+      </div>
+  </div>
+  </main>
+  </div>
+</body>
+
+</html>

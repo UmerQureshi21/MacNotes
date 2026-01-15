@@ -1,0 +1,510 @@
+/*
+ - This is the css file of the search page
+ - Authors: Alhan Walli & Umer Qureshi
+*/
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: var(--sidebar-color);
+  overflow: hidden;
+}
+/*Sidebar (Used in all Pages)*/
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 100vh;
+  background-color: var(--sidebar-color);
+  padding: 2rem 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+}
+
+.logo h1 {
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+.sidebar ul li {
+  margin: 1rem 1rem;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.sidebar ul li a i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 30px;
+}
+
+.search-page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: var(--stronger-background-color);
+}
+/*Search Sidebar*/
+.search-sidebar {
+  height: 30%;
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search-sidebar h2 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+
+.filter-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 2rem;
+  background-color: var(--lighter-background-color);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+  border-color: var(--sidebar-color);
+}
+
+.filter-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.filter-list input {
+  margin-right: 0.5rem;
+}
+
+.apply-filters {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.filtertitles{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sizerangelabels{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  bottom: 20px;
+  color: var(--text-color);
+  width: 79%;
+}
+
+#sizeandsort{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+select, option {
+  text-align: center;
+}
+
+
+
+
+input[type="range"] {
+  -webkit-appearance: none; /* remove default styling */
+  width: 100%;
+  background: transparent; /* allow custom track to show */
+}
+
+/* Track Styles */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 5px;
+  background: var(--text-color); /* white bar background */
+}
+
+.range-container {
+  position: relative;
+  width: 80%;
+  bottom: 30px;
+  margin-right: 10px;
+}
+
+.filter-group {
+  width: 20%;
+  position: relative;
+  bottom: 30px;
+}
+
+.range-slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none; /* So clicks go to the top slider only */
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.range-slider::-webkit-slider-thumb {
+  position: relative;
+  bottom: 7.5px;
+  background: var(--text-color);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  pointer-events: auto; /* Reactivate pointer events on thumbs */
+  position: relative;
+  z-index: 2;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 66%;
+  overflow-y: scroll;
+}
+.search-bar {
+  display: flex;
+  width: 100%;
+
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 15px;
+  border: none;
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.search-bar input:focus{
+  outline: none;
+}
+.search-bar input::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+
+.view-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.view-toggle {
+  background-color: var(--lighter-background-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.view-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.view-toggle.active {
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+/*Results Container*/
+.results-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.results-container.grid-view {
+  padding: 1%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.results-container.list-view {
+  grid-template-columns: 1fr;
+}
+
+.result-card {
+  background-color: var(--lighter-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.result-card h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.result-card p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.result-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.result-info .rating,
+.result-info .downloads {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.result-info i {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.delete-btn {
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+  margin-right: 20px;
+  font-family: inherit;      /* or explicitly set the same font */
+  font-size: 1rem;           /* match preview font size */
+  letter-spacing: normal;
+  color: white;
+}
+
+.delete-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.view-btn {
+  cursor: pointer;
+  background-color: var(--text-color);
+  padding: 10px 25px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+
+#coursecode_filter {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.checkbox-wrapper {
+  width: 10%;
+  text-align: center;
+  margin-right: 34px; /* change this somehow to make it consistent with the ones in the search page */
+}
+
+.coursecodecheckboxes {
+  display: none;
+}
+
+.coursecodecheckboxes:checked + span {
+  background-color: #007bff;
+  color: white;
+}
+
+.checkbox-wrapper label {
+  color: black;
+  display: block;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 4px 0;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-wrapper label:hover {
+  background-color: #e0e0e0;
+}
+
+/* This targets the label when its child checkbox is checked */
+.checkbox-wrapper input[type="checkbox"]:checked + label {
+  background-color: var(--text-color);
+  color: white;
+}
+
+.footer-links {
+  height: 4%;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.mode {
+  /*container of dark mode light mode swtich and text*/
+  background: var(--sidebar-color);
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: var(--text-color);
+}
+
+.mode .moon-sun {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 50px;
+  margin-left: 8%;
+}
+.mode i {
+  position: absolute;
+}
+
+.sun {
+  opacity: 0;
+}
+
+.toggle-switch {
+  right: 20px;
+  position: absolute;
+  display: flex;
+  height: 100%;
+  min-width: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--text-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  background: var(--sidebar-color);
+  transition: 0.3s ease;
+}
+
+.mode.dark .switch::before {
+  left: 25px;
+}
+
+.mode-text {
+  width: 60%;
+  margin-right: 40%;
+}
+
+.mode:hover {
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.mode:hover .switch {
+  background-color: var(--lighter-background-color);
+}

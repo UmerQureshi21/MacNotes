@@ -1,0 +1,265 @@
+/*
+ - This is the css file of the upload page
+ - Authors: Sepanta Kamali & Alhan Walli
+*/
+.upload-page {
+  display: flex;
+  min-height: 80vh;
+}
+
+img {
+  width: 30px;
+}
+
+.upload-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--stronger-background-color);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  background-color: var(--sidebar-color);
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+}
+.logo h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.sidebar ul li {
+  margin: 1rem 1rem;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: var(--text-color);
+  color: var( --lighter-background-color);
+}
+
+.sidebar ul li a i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.upload-content h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+/* Drag & Drop Area */
+.drag-drop-area {
+  border: 2px dashed var(--text-color);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drag-drop-area:hover {
+  background-color: var(--lighter-background-color);
+}
+
+.drag-drop-area .icon-upload {
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.drag-drop-area p {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.drag-drop-area span {
+  color: var(--text-colo--sidebar-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.upload-progress {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  height: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: var(--text-color);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+/* Metadata Form Styles*/
+.metadata-form {
+  background-color: var( --lighter-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--text-colo--sidebar-color);
+}
+
+.upload-and-result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#uploadButton{
+  background-color: var(--text-color);
+  border: none;
+}
+
+
+.footer-links{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+
+.mode {
+  /*container of dark mode light mode swtich and text*/
+  background: var(--sidebar-color);
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: var(--text-color);
+}
+
+.mode .moon-sun {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 50px;
+  margin-left: 8%;
+}
+.mode i {
+  position: absolute;
+}
+
+.sun {
+  opacity: 0;
+}
+
+
+.toggle-switch {
+  right: 20px;
+  position: absolute;
+  display: flex;
+  height: 100%;
+  min-width: 60px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background: var(--text-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  background: var(--sidebar-color);
+  transition: 0.3s ease;
+}
+
+.mode.dark .switch::before {
+  left: 25px;
+}
+
+.mode-text {
+  width: 60%;
+  margin-right: 40%;
+}
+
+.mode:hover{
+  background-color: var(--text-color);
+  color: var(--lighter-background-color);
+}
+
+.mode:hover .switch {
+  background-color: var(--lighter-background-color);
+}
+
+

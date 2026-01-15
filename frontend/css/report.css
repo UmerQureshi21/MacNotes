@@ -1,0 +1,85 @@
+/*
+ - This is the css file of the report page
+ - Authors: Sepanta Kamali
+*/
+
+body {
+    background-color: var( --lighter-background-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.report-container {
+    background-color: var(--sidebar-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(58, 12, 163, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 2px solid var(--sidebar-color);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--text-color);
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #aaa;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--text-color);
+    color: var( --lighter-background-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--text-color);
+}
+
+#go-back-btn{
+    background-color: var(--stronger-background-color);
+    color: #205781;
+    border-radius: 20px;
+    border: 2px solid #205781;
+}
+
+#go-back-btn:hover{
+    background-color: #205781;
+    color: white;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+- This is the html file of the file preview page
+- Author: Umer Qureshi
+-->
+<html lang="en">
+
+<head>
+  <!-- Set Dark Mode Theme Early If Enabled -->
+  <script>
+    if (sessionStorage.getItem("isDark") === "Yes") {
+      document.documentElement.style.setProperty('--text-color', '#b1b1b1');
+      document.documentElement.style.setProperty('--sidebar-color', '#2b2b2b');
+      document.documentElement.style.setProperty('--lighter-background-color', '#434343');
+      document.documentElement.style.setProperty('--stronger-background-color', 'rgb(26, 26, 26)');
+      document.documentElement.classList.add('dark');
+    }
+  </script>    
+  <meta charset="UTF-8" />
+  <title>MacNotes | File Details</title>
+  <!--Icon Pack Link-->
+  <!-- Note that all elements <i> are icon elements-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <!--Stylesheet + Scipts-->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/filedetails.css" />
+  <script type="module" src="js/adminsearchfiledetails.js"></script>
+</head>
+
+<body>
+  <!--Header-->
+  <!--Container-->
+  <div class="filedetails-container">
+    <div class="file-preview">
+      <iframe id = "filedisplay" src="uploads/Quiz5.pdf" width="100%" height="100%" style="border: none;"></iframe>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="file-info-sidebar">
+      <div class="sidebartitle">
+        <div class="logo">
+          <img src="images/maclogo.png" alt="">
+          <h1>MacNotes</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="javascript:history.go(-2)" class="btn-login">Back</a>
+        </nav>
+      </div>
+      <section class="file-details">
+        <h2>Document Details</h2>
+        <ul>
+          <li id="username"></li>
+          <li id = "filetitle"></li>
+          <li id = "filedescription" > </li>
+          <li id = "coursecode"></li>
+        </ul>
+      </section>
+      <div class="download-section">
+        <button id = "preview-download-btn" class="btn btn-primary download-btn">
+          <i class="ri-download-2-line"></i> <span>Download</span>
+        </button>
+        <p class="download-count">Downloads: <span id="number-downloads-preview">123</span></p>
+      </div>
+      <section class="ratings-section">
+        <h2>Ratings</h2>
+        <div class="star-rating">
+          <i id = "sstar1" class="ri-star-fill"></i>
+          <i id = "sstar2" class="ri-star-fill"></i>
+          <i id = "sstar3" class="ri-star-fill"></i>
+          <i id = "sstar4" class="ri-star-half-fill"></i>
+          <i id = "sstar5" class="ri-star-line"></i>
+        </div>
+        <p class="average-rating"><span id="average-rate"> 0.0</span> / 5 (Average)</p>
+
+        <div id = "rating-section" class="ratings-sections">
+          <h3>Rate This File</h3>
+            <div class="star-rating">
+              <i id = "star1" class="ri-star-line"></i>
+              <i id = "star2" class="ri-star-line"></i>
+              <i id = "star3" class="ri-star-line"></i>
+              <i id = "star4" class="ri-star-line"></i>
+              <i id = "star5" class="ri-star-line"></i>
+            </div>
+            <input id = "submit-rating-btn" type="button" class="btn btn-primary" value="Submit Rating">
+        </div>
+        <p id="rating-submission-feedback"></p>
+
+        <!-- <button class="accordion-btn" id="accordionBtn">
+          Show Rating Distribution
+          <i class="ri-arrow-down-s-line"></i>
+        </button> -->
+        <div class="accordion-content" id="accordionContent">
+          <div class="rating-bar">
+            <span>5 Stars</span>
+            <div class="bar">
+              <div class="bar-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="rating-bar">
+            <span>4 Stars</span>
+            <div class="bar">
+              <div class="bar-fill" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="rating-bar">
+            <span>3 Stars</span>
+            <div class="bar">
+              <div class="bar-fill" style="width: 5%"></div>
+            </div>
+          </div>
+          <div class="rating-bar">
+            <span>2 Stars</span>
+            <div class="bar">
+              <div class="bar-fill" style="width: 3%"></div>
+            </div>
+          </div>
+          <div class="rating-bar">
+            <span>1 Star</span>
+            <div class="bar">
+              <div class="bar-fill" style="width: 2%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <button id = "report-btn" class="btn btn-primary download-btn">
+          <i class="ri-flag-2-line"></i> <span>Report</span>
+        </button>
+        <div id="delete-button-wrapper"></div>
+        </button>
+        <div class="footer-links">
+          <a href="#" style="color: var(--white);">About Us</a>
+          <a href="#" style="color: var(--white);">Contact</a>
+          <a href="#" style="color: var(--white);">Privacy Policy</a>
+        </div>
+    </aside>
+  </div>
+</body>
+
+</html>

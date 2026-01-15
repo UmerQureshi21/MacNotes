@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+- This is the html file of the help page
+- Author: Alhan Walli & Aryan Minhas
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MacNotes | Help / FAQ</title>
+  <!--Icon Pack Link-->
+  <!-- Note that all elements <i> are icon elements-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <!--Stylesheet + Scipts-->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/homeStyle.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/help.css" />
+  <script src="js/settings.js"></script>
+  <script src="js/help.js"></script>
+  <script src="js/adminbutton.js"></script>
+</head>
+
+<body>
+  <!--Header-->
+  <header class="header">
+    <div class="logo">
+      <h1>MacNotes</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="dashboard.html" class="btn-login">Back</a>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">
+          <i class="ri-settings-3-line"></i>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="help.html">Help/FAQ</a>
+          <a href="admin.html">Admin Login</a>
+          <a href="#">Other Settings</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Containter-->
+  <div class="dashboard-container">
+    <!--Sidebar-->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li class = "dashboard-button">
+          <a href="dashboard.html">
+            <i class="ri-dashboard-line"></i>
+            <span id="sidebar-options">Dashboard</span>
+          </a>
+        </li>
+        <li class = "upload-button">
+          <a href="upload.html">
+            <i class="ri-upload-cloud-2-line"></i> Upload
+          </a>
+        </li>
+        <li class = "myfiles-button">
+          <a href="myfiles.html"> <i class="ri-folder-line"></i> My Files </a>
+        </li>
+        <li class = "searchpage-button">
+          <a href="searchpage.html">
+            <i class="ri-search-line"></i> Search
+          </a>
+        </li>
+        <li class = "logout-button">
+          <a href="index.html">
+            <i class="ri-logout-box-r-line"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!--Main Content-->
+    <main class="main-content">
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I upload my notes?</div>
+          <div class="faq-answer">
+            To upload your notes, go to the Upload page, drag and drop your file or use the browse option, fill in the
+            metadata, and click Upload.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I search for notes?</div>
+          <div class="faq-answer">
+            Use the search bar on the Dashboard or the Search page to filter notes by keywords. The results update
+            automatically.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What file formats are supported?</div>
+          <div class="faq-answer">
+            We support common formats such as PDF, DOCX, JPEG, and PNG. Check our upload guidelines for more details.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How do I report inappropriate content?</div>
+          <div class="faq-answer">
+            Click the Report button on the File Details page to flag content. Our team will review your report and take
+            action.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How is my reputation calculated?</div>
+          <div class="faq-answer">
+            Your reputation is based on factors such as uploads, downloads, and ratings from other users. Check your
+            profile for detailed insights.
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!--Footer-->
+  <footer class="footer" style="background-color: var(--primary-color-dark);">
+    <div class="footer-links">
+      <a href="#" style="color: var(--white);">About Us</a>
+      <a href="#" style="color: var(--white);">Contact</a>
+      <a href="#" style="color: var(--white);">Privacy Policy</a>
+    </div>
+    <p style="color: var(--white);">&copy; 2025 MacNotes. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

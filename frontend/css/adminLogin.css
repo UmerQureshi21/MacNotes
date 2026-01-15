@@ -1,0 +1,112 @@
+/*
+ - This is the css file of the admin login page
+ - Authors: Marko Kosoric
+*/
+
+body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #title-container{
+    display: flex;
+    flex-direction: row;
+     position: absolute;
+     top: 20px;
+     left: 20px;
+     z-index: 100;
+     font-family: "Poppins", sans-serif;
+     font-size: 1.5rem;
+  }
+
+  #title-container img{
+    width: 60px;
+  }
+
+  .title-primary{
+    color: var(--text-color);
+  }
+  
+  .title-white{
+     color: black;
+  }
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    background-color: var(--stronger-background-color);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .form-container {
+    width: 60%;
+    padding: 2rem;
+    transition: 0.6s ease-in-out;
+    /* Removed position: absolute and height: 100% */
+  }
+  
+  .signin-container {
+    z-index: 2;
+  }
+  
+  form {
+    height: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+  }
+  
+  .form-group {
+    position: relative;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: var(--sidebar-color);
+    border-bottom: 1px solid var(--text-color);
+  }
+  
+  .forgot-password {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    margin-top: 10px;
+  }
+  
+  .form-container button {
+    padding: 0.75rem 4rem;
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--lighter-background-color);
+    border-radius: 2rem;
+    background-color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .right-panel-active .signin-container {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  
+  #signin-email, #signin-password, #signup-password, #signup-email, #signup-username{
+    background-color: transparent;
+  }
+
