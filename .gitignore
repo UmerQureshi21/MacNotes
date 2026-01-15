@@ -1,0 +1,93 @@
+############################
+# OS
+############################
+.DS_Store
+Thumbs.db
+
+
+############################
+# IDEs
+############################
+.idea/
+.vscode/
+*.iml
+
+
+############################
+# Environment / Secrets
+############################
+.env
+.env.*
+application-secrets.properties
+application-prod.properties
+backend/src/main/resources/application-secrets.properties
+
+
+############################
+# Logs
+############################
+*.log
+logs/
+
+
+############################
+# Java / Spring Boot
+############################
+backend/target/
+backend/*.jar
+backend/*.war
+backend/*.ear
+backend/.classpath
+backend/.project
+backend/.settings/
+
+
+############################
+# Gradle (if used)
+############################
+backend/.gradle/
+backend/build/
+
+
+############################
+# Maven Wrapper
+############################
+backend/.mvn/wrapper/maven-wrapper.jar
+
+
+############################
+# Node / Frontend
+############################
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+
+
+############################
+# Testing
+############################
+**/coverage/
+**/.nyc_output/
+
+
+############################
+# Docker
+############################
+**/.docker/
+**/*.pid
+
+
+############################
+# Temporary / Uploads
+############################
+tmp/
+temp/
+uploads/
+**/uploads/
+
+
+############################
+# Mac Notes App Data (just in case)
+############################
+.mac-notes/
